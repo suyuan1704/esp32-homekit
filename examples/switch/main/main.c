@@ -22,13 +22,14 @@
 #define MODEL_NAME  "ESP32_ACC"
 #define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 
-#if 1
-#define EXAMPLE_ESP_WIFI_SSID "unibj"
-#define EXAMPLE_ESP_WIFI_PASS "12673063"
-#endif
 #if 0
-#define EXAMPLE_ESP_WIFI_SSID "NO_RUN"
-#define EXAMPLE_ESP_WIFI_PASS "1qaz2wsx"
+//Hysiry-Test-2
+//kang_test
+#define EXAMPLE_ESP_WIFI_SSID "kang_test"
+#define EXAMPLE_ESP_WIFI_PASS "123456789"
+#else
+#define EXAMPLE_ESP_WIFI_SSID "Hysiry-Test-2"
+#define EXAMPLE_ESP_WIFI_PASS "h88889999"
 #endif
 
 static gpio_num_t LED_PORT = GPIO_NUM_2;
