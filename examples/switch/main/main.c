@@ -22,7 +22,7 @@
 #define MODEL_NAME  "ESP32_ACC"
 #define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 
-#if 0
+#if 1
 //Hysiry-Test-2
 //kang_test
 #define EXAMPLE_ESP_WIFI_SSID "kang_test"
@@ -81,7 +81,7 @@ void led_notify(void* arg, void* ev_handle, bool enable)
     }
 }
 
-static bool _identifed = false;
+//static bool _identifed = false;
 void* identify_read(void* arg)
 {
     return (void*)true;
