@@ -472,7 +472,7 @@ void hap_accessory_remove(void* acc_instance) {
 
 void hap_init(void)
 {
-    if (_hap_desc)
+    if (_hap_desc)      //如果已初始化，直接返回
         return;
 
     _hap_desc = calloc(1, sizeof(struct hap));
@@ -481,11 +481,13 @@ void hap_init(void)
 
     vSemaphoreCreateBinary(_hap_desc->mutex);
 
+    //注册http处理函数
     struct httpd_ops httpd_ops = {
         .accept = _hap_connection_accept,
         .close = _hap_connection_close,
         .recv = _msg_recv,
     };
 
+    //初始化httpd
     httpd_init(&httpd_ops);
 }
